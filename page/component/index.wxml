@@ -1,6 +1,6 @@
 <view class="index">
   <view class="index-hd">
-    <image class="index-logo" src="resources/kind/australia-map 192x192.gif"></image>
+    <image class="index-logo" src="resources/kind/panda_koala.png"></image>
     <view class="index-desc">Hi, I will ask you questions from the Australian Citizenship Practice Test, try to get as many right as you can, in the real Citizenship Test, you need to get 15 out of 20 correct.</view>
   </view>
   <view class="index-bd">
