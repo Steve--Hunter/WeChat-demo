@@ -1,24 +1,4 @@
-/**
- Copyright 2014-2015 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 
- Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with the License. A copy of the License is located at
-
- http://aws.amazon.com/apache2.0/
-
- or in the "license" file accompanying this file. This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
- */
-
-/**
- * This sample shows how to create a simple Trivia skill with a multiple choice format. The skill
- * supports 1 player at a time, and does not support games across sessions.
- */
-
-'use strict';
-
-/**
- * When editing your questions pay attention to your punctuation. Make sure you use question marks or periods.
- * Make sure the first answer is the correct one. Set at least 4 answers, any extras will be shuffled in.
- */
 var questions = [
     {
         "What do we remember on Anzac Day?": [
@@ -38,21 +18,21 @@ var questions = [
         "Which official symbol of Australia identifies Commonwealth property?": [
             "Commonwealth Coat of Arms",
             "The national anthem",
-            "Australia’s national flower" 
+            "Australia’s national flower"
         ]
     },
     {
         "Which of these statements about Australia’s system of government is correct?": [
             "The government is elected by the people",
             "The Queen of Australia chooses people to form the Australian Parliament",
-            "The Prime Minister chooses our Members of Parliament" 
+            "The Prime Minister chooses our Members of Parliament"
         ]
     },
     {
         "Which of these is an example of freedom  of speech?": [
             "People can peacefully protest against government decisions",
             "Men and women are treated equally in a  court of law",
-            "Australians are free to not follow a religion" 
+            "Australians are free to not follow a religion"
         ]
     },
     {
@@ -73,14 +53,14 @@ var questions = [
         "Which of these is a responsibility of all Australian citizens aged 18 years or over?": [
             "To vote in elections",
             "To attend local council meetings",
-            "To have a current Australian passport" 
+            "To have a current Australian passport"
         ]
     },
     {
         "Which of these is a responsibility of Australian citizens aged 18 years or over?": [
             "To serve on a jury if called to do so",
             "To do local community service",
-            "To carry a passport at all times" 
+            "To carry a passport at all times"
         ]
     },
     {
@@ -101,63 +81,63 @@ var questions = [
         "What happened in Australia on  1 January 1901? ": [
             "The Australian Constitution came into effect",
             "The Australian Constitution was changed by a referendum",
-            "The Australian and New Zealand Army Corps  was formed" 
+            "The Australian and New Zealand Army Corps  was formed"
         ]
     },
     {
         "What is the name of the legal document that sets out the rules for the government of Australia?": [
             "The Australian Constitution",
             "The Australian Commonwealth",
-            "The Australian Federation" 
+            "The Australian Federation"
         ]
     },
     {
         "What is a referendum?": [
          "A vote to change the Australian Constitution",
          "A vote to change the Australian Constitution",
-            "A vote to change the government"   
+            "A vote to change the government"
         ]
     },
     {
         "Which arm of government has the power to interpret and apply laws? ": [
             "Judicial",
             "Executive",
-            "Legislative"  
+            "Legislative"
         ]
     },
     {
         "Which of these is a role of the  Governor-General? ": [
             "The signing of Bills passed by the  Australian Parliament",
             "The appointment of state premiers",
-            "The appointment of the Head of State "       
+            "The appointment of the Head of State "
         ]
     },
     {
         "Which of these statements about state governments is correct?": [
             "Each state has its own constitution",
             "All states have the same constitution",
-            "The states have no constitution"   
+            "The states have no constitution"
         ]
     },
     {
         "What is the name given to the party or coalition of parties with the second largest number of members in the House of Representatives? ": [
             "The Opposition",
             "The Government",
-            "The Senate"    
+            "The Senate"
         ]
     },
     {
         "What is the name of a proposal to make a law in parliament? ": [
         "Bill",
         "Debate",
-        "Royal Assent "    
+        "Royal Assent "
         ]
     },
     {
         "Who maintains peace and order in  Australia? ": [
             "Police",
             "Lawyers",
-            "Public servants"    
+            "Public servants"
         ]
     }
 ];
@@ -471,7 +451,7 @@ function handleRepeatRequest(intent, session, callback) {
 function handleGetHelpRequest(intent, session, callback) {
     // Provide a help prompt for the user, explaining how the game is played. Then, continue the game
     // if there is one in progress, or provide the option to start another one.
-    
+
     // Ensure that session.attributes has been initialized
     if (!session.attributes) {
         session.attributes = {};
@@ -552,4 +532,3 @@ function buildResponse(sessionAttributes, speechletResponse) {
         response: speechletResponse
     };
 }
-
