@@ -1,5 +1,8 @@
 const openIdUrl = require('./config').openIdUrl
 
+
+
+
 App({
   onLaunch: function () {
     console.log('App Launch')
